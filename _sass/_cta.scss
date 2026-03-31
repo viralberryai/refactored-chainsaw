@@ -1,0 +1,28 @@
+.cta {
+  background-color: $color-bg;
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__heading {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $color-text;
+  }
+
+  &__subtext {
+    font-size: 1.0625rem;
+    color: $color-muted;
+    max-width: 40ch;
+  }
+
+  &__btn {
+    margin-top: $spacing-sm * 0.5;
+  }
+}

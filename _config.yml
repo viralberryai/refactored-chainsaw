@@ -1,0 +1,27 @@
+title: Synthwork
+description: Business automation for Singapore SMEs — we automate the work you hate
+url: "https://synthwork.app"
+baseurl: ""
+author: Synthwork
+logo: /assets/images/og-image.png
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.png
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/

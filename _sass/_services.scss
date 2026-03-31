@@ -1,0 +1,66 @@
+.services {
+  background-color: $color-bg;
+
+  &__heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+
+  &__cards {
+    display: grid;
+    gap: $spacing-sm;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-md;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+    background-color: $color-surface;
+    border: 1px solid rgba($color-text, 0.06);
+    border-radius: $radius;
+    padding: $spacing-md;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba($color-accent, 0.35);
+    }
+  }
+
+  &__card-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $color-accent;
+    margin-bottom: 0.75rem;
+  }
+
+  &__card-desc {
+    font-size: 0.9375rem;
+    color: $color-muted;
+    line-height: 1.6;
+  }
+
+  &__crosslink {
+    margin-top: $spacing-md;
+    font-size: 0.9375rem;
+    color: $color-muted;
+  }
+
+  &__crosslink-anchor {
+    color: $color-accent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

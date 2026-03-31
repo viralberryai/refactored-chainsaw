@@ -1,0 +1,83 @@
+.process {
+  background-color: $color-surface;
+
+  &__heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+
+  &__steps {
+    display: grid;
+    gap: $spacing-sm;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $spacing-md;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba($color-accent, 0.3) 10%,
+          rgba($color-accent, 0.3) 90%,
+          transparent
+        );
+      }
+    }
+  }
+
+  &__step {
+    background-color: $color-bg;
+    border: 1px solid rgba($color-text, 0.06);
+    border-radius: $radius;
+    padding: $spacing-md;
+    position: relative;
+
+    @media (min-width: $breakpoint-md) {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      padding-top: $spacing-md * 2;
+    }
+  }
+
+  &__step-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-accent;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    font-variant-numeric: tabular-nums;
+
+    @media (min-width: $breakpoint-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__step-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: 0.5rem;
+  }
+
+  &__step-desc {
+    font-size: 0.9375rem;
+    color: $color-muted;
+    line-height: 1.6;
+  }
+}

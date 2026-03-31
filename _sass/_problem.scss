@@ -1,0 +1,45 @@
+.problem {
+  background-color: $color-surface;
+
+  &__heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+
+  &__cards {
+    display: grid;
+    gap: $spacing-sm;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-md;
+    }
+  }
+
+  &__card {
+    background-color: $color-bg;
+    border: 1px solid rgba($color-accent, 0.2);
+    border-radius: $radius;
+    padding: $spacing-md;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 3px;
+      background-color: $color-accent;
+      border-radius: 2px;
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &__card-text {
+    font-size: 1.0625rem;
+    color: $color-text;
+    line-height: 1.5;
+  }
+}

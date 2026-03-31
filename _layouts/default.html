@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/fav.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% seo %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Synthwork",
+    "url": "https://synthwork.app",
+    "description": "Business automation for Singapore SMEs — workflow automation, API integrations, and reporting pipelines.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Singapore"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@synthwork.app",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://consultant.ebiya.sg"
+    ]
+  }
+  </script>
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>
