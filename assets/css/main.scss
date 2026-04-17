@@ -2,13 +2,12 @@
 ---
 
 @charset "UTF-8";
-@import 'variables';
-@import 'base';
-@import 'header';
-@import 'hero';
-@import 'problem';
-@import 'services';
-@import 'process';
-@import 'work';
-@import 'cta';
-@import 'footer';
+@use 'base';
+@use 'header';
+@use 'hero';
+@use 'problem';
+@use 'services';
+@use 'process';
+@use 'work';
+@use 'cta';
+@use 'footer';

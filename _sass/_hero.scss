@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .hero {
   background-color: $color-bg;
   padding-top: $spacing-lg * 1.5;
